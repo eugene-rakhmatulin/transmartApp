@@ -59,6 +59,9 @@ function createUtilitiesMenu(helpURL, contact, appTitle, basePath, buildVer, css
 	    },'-',{
 	        text : 'Login',
 	        href : basePath+'/login/forceAuth'
+	    },{
+	    	text: 'User info',
+	    	href : basePath+'/userInfo'
 	    },'-',{
 	        text : 'Log Out',
 	        href : basePath+'/logout'
