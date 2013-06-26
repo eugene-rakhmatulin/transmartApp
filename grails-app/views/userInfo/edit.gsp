@@ -38,7 +38,7 @@
 		<div id="header-div">
 			<g:render template="/layouts/commonheader" />
 		
-			<div class="body">
+			<div class="body" width="90%">
 				<h1>${person.userRealName?.encodeAsHTML()}'s user information edit</h1>
 				<g:if test="${flash.message}">
 				<div class="message">${flash.message}</div>
@@ -57,21 +57,21 @@
 							<tr class="prop">
 								<td valign="top" class="name"><label for="userRealName">Full Name:</label></td>
 								<td valign="top" class="value ${hasErrors(bean:person,field:'userRealName','errors')}">
-									<input type="text" id="userRealName" name="userRealName" value="${person.userRealName?.encodeAsHTML()}"/>
+									<input type="text" id="userRealName" name="userRealName" value="${person.userRealName?.encodeAsHTML()}" size="30"/>
 								</td>
 							</tr>
 		
 							<tr class="prop">
 								<td valign="top" class="name"><label for="description">Description:</label></td>
 								<td valign="top" class="value ${hasErrors(bean:person,field:'description','errors')}">
-									<input type="text" id="description" name="description" value="${person.description?.encodeAsHTML()}"/>
+									<input type="text" id="description" name="description" value="${person.description?.encodeAsHTML()}" size="100"/>
 								</td>
 							</tr>
 		
 							<tr class="prop">
 								<td valign="top" class="name"><label for="email">Email:</label></td>
 								<td valign="top" class="value ${hasErrors(bean:person,field:'email','errors')}">
-									<input type="text" id="email" name="email" value="${person?.email?.encodeAsHTML()}"/>
+									<input type="text" id="email" name="email" value="${person?.email?.encodeAsHTML()}" size="50"/>
 								</td>
 							</tr>
 		
@@ -89,7 +89,7 @@
 							<tr class="prop">
 								<td valign="top" class="name"><label for="current_passwd">Password:</label></td>
 								<td valign="top" class="value <g:if test="${password_error}">errors</g:if>">
-									<input type="password" id="current_passwd" name="current_passwd"/>
+									<input type="password" id="current_passwd" name="current_passwd" size="30"/>
 								</td>
 							</tr>
 		
